@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title>CSS3 Only Slideshow Experiment</title>
+	<link rel="stylesheet" href="normalize.min.css">
+	<link rel="stylesheet" href="css-slider.css">
+</head>
+<body>
+	<div class="css-slide-container">
+		<ul class="css-slider">
+		  <li id="img1">
+			<img src="http://placekitten.com/400/250">
+			<a href="#img1">Kitten</a>
+		  <li id="img2">
+			<img src="http://baconmockup.com/400/250">
+			<a href="#img2">Pork</a>
+		  <li id="img3">
+			<img src="http://placehold.it/400x250">
+			<a href="#img3">Grey Matter</a> 
+		</ul>
+	</div>
+
+	<article class="knowledge-container">
+		<h1>CSS Slider</h1>
+		<h2>Super basic, for serious.</h2>
+		<p>Alright, for starts, you might notice it doesn't slide. You might also notice that it doesn't go automatically like you would expect a JS slideshow to do. I'm working on both of these ideas, but right now I just wanted to get it out of my head and onto a webpage.</p>
+		<h2>Some things to note</h2>
+		<ol>
+			<li>This is really not a production ready idea. I was messing around with an image slider today and wondered if anything like this was possible.
+			<li>Yeah, I'm sure this has already been done; better, cleaner and more functional. I don't care, it was fun.
+			<li>For those who are wondering, the slider relies on a browser that recognizes and matches the :target psuedo selector to your URI hash. In your CSS you can make selectors that look like: 
+				<code>
+					.fu:target {<br>
+					&nbsp;&nbsp;/* Style stuff Goes Here */<br>
+					}
+				</code>
+				And then in your HTML you can have:
+				<code>
+					&lt;span class="fu" id="#bar"&gt;Hi, everybody!&lt;/span&gt;<br>
+					&lt;a href="#bar"&gt;Click Me&lt;/a&gt;
+				</code>
+				And when you obey the &ldquo;Click Me&rdquo; imperative, it will apply your styles to <span class="code">id="#bar"</span> (this will also work if you were to navigate to the URI manually like <span class="code">http://test.com#bar</span>). See what I'm saying?
+			<li>When you click one of the controls, or load up a hashed URI, it's gonna bounce you right down to the slider. This may or may not be a good thing, but it's the thing you have. I don't know if there's any way to defeat it, even if you are using JavaScript.
+		</ol>
+		<h2>Gimme The Code!!!</h2>
+		<p>So sweet, if you dig where this is going, <a href="https://github.com/pbaldwin/css-slider">clone it on GitHub or something</a>, mmm'k?</p>
+	</article>
+</body>
+</html>
